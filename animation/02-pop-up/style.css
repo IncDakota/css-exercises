@@ -32,11 +32,11 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   position: fixed;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform-origin: center;
   transform: translate(-50%, -50%);
-  pointer-events: none;
+  pointer-events: visibleStroke;
   opacity: 0%;
   text-align: center;
 }
@@ -53,8 +53,11 @@ button {
 }
 
 .popup-modal.show {
-  opacity: 100%;
+  opacity: 1;
   pointer-events: all;
+  transform: translate(-50%, 100%);
+  transition: opacity 1s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .backdrop.show {
